@@ -2,7 +2,7 @@
     "manifest_version": 2,
 
     "name": "BleNRC",
-    "description": "BleNRC vergemakkelijkt het opzoeken van NRC-artikelen in Blendle, door elke NRC-link direct naar het Blendle artikel te laten verwijzen.",
+    "description": "BleNRC vergemakkelijkt het opzoeken van NRC-artikelen in Blendle, door elke NRC-link direct naar Blendle te laten verwijzen.",
     "version": "0.1",
 
     "content_scripts": [
