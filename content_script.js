@@ -8,7 +8,7 @@ $(document).on("click", "a", function(){
     // Check which website the link goes to
     if(pathArray[1] == "next"){ 
         site = "nrcnext";
-        siteKort = "nn";
+        siteShort = "nn";
     }else{ 
         site = "nrc-handelsblad";
         siteShort = "nrc";
@@ -35,15 +35,17 @@ $(document).on("click", "a", function(){
         url: converted_url,
         success: 
             function(content){
-                forbidden = $("<div />").append( $.parseHTML(content) ).find('Forbidden');
+                forbidden = $("<div />").append( $.parseHTML(content) ).find('pre');
                 if(forbidden = null){
-                    forbidden = $("<div />").append( $.parseHTML(content) ).find('We konden het item dat je probeerde te openen helaas niet vinden. Sorry!');
+                    forbidden = $("<div />").append( $.parseHTML(content) ).find("Hier is niks te vinden.");
                 }
             }
     });
     
     // If it has an ID (paid article), redirect to the Blendle URL
-    if(!isNaN(articleId) && forbidden != null){
+    if(!isNaN(articleId) && forbidden != null && isNaN(title)){
         $(this).attr('href', converted_url); // Redirect to the converted URL
+    }else{
+        this.attr('href', link_target);
     }
 });
