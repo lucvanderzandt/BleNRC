@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+
+    "name": "BleNRC",
+    "description": "BleNRC vergemakkelijkt het opzoeken van NRC-artikelen in Blendle, door elke NRC-link direct naar het Blendle artikel te laten verwijzen.",
+    "version": "0.1",
+
+    "content_scripts": [
+        {
+            "matches": ["*://www.nrc.nl/*"],
+            "js":["jquery.js","content_script.js"]
+        }
+    ],
+
+    "permissions": [
+        "activeTab",
+        "https://ajax.googleapis.com/"
+    ]
+}
