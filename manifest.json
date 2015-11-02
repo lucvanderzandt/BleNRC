@@ -3,11 +3,12 @@
 
     "name": "BleNRC",
     "description": "BleNRC vergemakkelijkt het opzoeken van NRC-artikelen in Blendle, door elke NRC-link direct naar Blendle te laten verwijzen.",
-    "version": "0.1",
+    "version": "0.2",
+    "author": "Luc van der Zandt",
 
     "content_scripts": [
         {
-            "matches": ["*://www.nrc.nl/*"],
+            "matches": ["*://*.nrc.nl/*"],
             "js":["jquery.js","content_script.js"]
         }
     ],
