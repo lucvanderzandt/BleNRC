@@ -1,19 +1,16 @@
-$(document).on("click", "a", function(){
-    var link_target = $(this).attr('href');
-    if(link_target.charAt(0) == '/'){
-        link_target = "http://www.nrc.nl" + link_target;
-    }
-     
-    var pathArray = link_target.split('/'); // All parts of the URL
+var path = document.location.href;
+if(path.indexOf("nrc.nl/next/") > -1 || path.indexOf("nrc.nl/handelsblad/") > -1){
+    window.stop(); // Stop loading the paywall page
     
+    var pathArray = path.split('/'); // All parts of the URL  
     var site = ""; // The string name of the website
     var siteShort = ""; // The shortened string name of the website
 
     // Check which website the link goes to
-    if(pathArray.indexOf("next") > -1){ 
+    if(path.indexOf("/next/") > -1){ 
         site = "nrcnext";
         siteShort = "nn";
-    }else if(pathArray.indexOf("handelsblad") > -1){ 
+    }else if(path.indexOf("/handelsblad/") > -1){ 
         site = "nrc-handelsblad";
         siteShort = "nrc";
     }
@@ -54,8 +51,6 @@ $(document).on("click", "a", function(){
     
     // If it has an ID and is from nrcnext or handelsblad (paid/Blendle article), redirect to the Blendle URL
     if(!isNaN(articleId) && isNaN(title) && siteShort != ""){
-        $(this).attr('href', converted_url); // Redirect to the converted URL
-    }else{
-        this.attr('href', link_target);
+        window.location.replace(converted_url); // Redirect to the converted URL
     }
-});
+}
