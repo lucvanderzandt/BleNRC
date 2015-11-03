@@ -1,4 +1,4 @@
-if((document.location.href.indexOf("nrc.nl/next/") > -1 || document.location.href.indexOf("nrc.nl/handelsblad/") > -1) && document.referrer !== document.location.href){
+if((document.location.href.indexOf("nrc.nl/next/") > -1 || document.location.href.indexOf("nrc.nl/handelsblad/") > -1) && document.referrer !== document.location.href && document.location.href.indexOf("?noscript") == -1){
     var path = document.location.href;
     window.stop(); // Stop loading the paywall page
     
