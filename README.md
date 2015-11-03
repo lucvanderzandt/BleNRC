@@ -21,7 +21,7 @@ BleNRC vergemakkelijkt het opzoeken van NRC-artikelen in Blendle, door elke NRC-
 Aan het lezen van Blendle-artikelen zijn kosten verbonden. De ontwikkelaar van deze extensie is niet aansprakelijk voor (onbedoeld) gemaakte kosten.
 
 ### Disclaimer 2
-Deze extensie is op dit moment in betà. Er zitten dus (nog) fouten in. Indien u fouten ontdekt, en u wilt deze graag met de ontwikkelaar delen, kunt u hier feedback achterlaten of de ontwikkelaar contacteren via Twitter: [@lucvanderzandt](https://twitter.com/lucvanderzandt). Alvast hartelijk bedankt!
+Deze extensie is op dit moment in bèta. Er kunnen dus nog fouten in zitten en mogelijk werkt niet alles optimaal. Indien u fouten ontdekt, en u wilt deze graag met de ontwikkelaar delen, kunt u hier feedback achterlaten of de ontwikkelaar contacteren via Twitter: [@lucvanderzandt](https://twitter.com/lucvanderzandt). Alvast hartelijk bedankt!
 
 ### Bekende fouten
 Bekende fouten en hun status staan [hier](https://github.com/lucvanderzandt/BleNRC/issues). Hier kunt u ook fouten die nog niet bekend zijn indienen.
