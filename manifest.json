@@ -5,14 +5,14 @@
     "description": "BleNRC vergemakkelijkt het opzoeken van NRC-artikelen in Blendle, door elke NRC-link direct naar Blendle te laten verwijzen.",
     "version": "0.5.2",
 
-    "icons": {"128": "blenrc_128.png",
-	      "48": "blenrc_48.png",
-              "16": "blenrc_16.png"},
+    "icons": {"128": "img/blenrc_128.png",
+	      "48": "img/blenrc_48.png",
+              "16": "img/blenrc_16.png"},
 
     "content_scripts": [
         {
             "matches": ["*://*.nrc.nl/*"],
-            "js":["jquery.js","nrc_script.js"],
+            "js":["lib/jquery.js","nrc_script.js"],
 	        "run_at": "document_start"
         },
         {
