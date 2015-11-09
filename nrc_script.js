@@ -1,5 +1,5 @@
-if((document.location.href.indexOf("nrc.nl/next/") > -1 || document.location.href.indexOf("nrc.nl/handelsblad/") > -1) && document.referrer !== document.location.href && document.location.href.indexOf("?noscript") == -1){
-    var path = document.location.href;
+var path = document.location.href;
+if((path.indexOf("nrc.nl/next/") > -1 || path.indexOf("nrc.nl/handelsblad/") > -1) && document.referrer !== path && path.indexOf("?noscript") == -1){
     window.stop(); // Stop loading the paywall page
     
     var pathArray = path.split('/'); // All parts of the URL  
@@ -15,13 +15,14 @@ if((document.location.href.indexOf("nrc.nl/next/") > -1 || document.location.hre
         siteShort = "nrc";
     }
 
+    // Obtain URL info
+    var urlInfo = pathArray[pathArray.length -1].split(/[\s-]+/);
+
     // Get the part of the URL containing the article title
-    var titleRaw = pathArray[pathArray.length - 1].split(/[\s-]+/); 
-    var title = titleRaw.slice(0, -1).join("-");
+    var title = urlInfo.slice(0, -1).join("-");
 
     // Get the part of the URL containing the article ID
-    var articleIdRaw = pathArray[pathArray.length - 1].split(/[\s-]+/);
-    var articleId = articleIdRaw[articleIdRaw.length-1];
+    var articleId = urlInfo[urlInfo.length-1];
 
     // Get month number if month is in letters   
     var month = '01';
