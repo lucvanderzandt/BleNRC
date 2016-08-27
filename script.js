@@ -33,7 +33,8 @@ function redirect(title) {
 					var results = object._embedded.results;
 					for(var i = 0; i < results.length; i++) {
 						var head = results[i]._embedded.item._embedded.manifest.body[0].content.toLowerCase();
-						if(head.indexOf(title) > -1 || title.indexOf(head) > -1) {
+						var provider = results[i]._embedded.item._embedded.manifest.provider.id;
+						if((head.indexOf(title) > -1 || title.indexOf(head) > -1) && (provider == "nrc" || provider == "nn")) {
 							var blendle = confirm("Dit artikel staat op Blendle. Naar Blendle?");
 							if(blendle) {
 								converted_url = "http://blendle.com/item/" + getParameterByName("item", results[i]._links.self.href);
