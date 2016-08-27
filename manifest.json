@@ -3,7 +3,7 @@
 
     "name": "BleNRC",
     "description": "BleNRC vergemakkelijkt het opzoeken van NRC-artikelen in Blendle, door elke NRC-link direct naar Blendle te laten verwijzen.",
-    "version": "0.6",
+    "version": "0.6.1",
 
     "icons": {"128": "img/blenrc_128.png",
 	      "48": "img/blenrc_48.png",
