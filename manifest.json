@@ -19,6 +19,7 @@
 
     "permissions": [
         "activeTab",
+		"*://*.blendle.com/*",
         "https://ajax.googleapis.com/"
     ]
 }
